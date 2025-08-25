@@ -19,9 +19,11 @@ public class Chapter10 {
 				.sorted((t1, t2) -> t1.compareTo(t2))
 				.collect(Collectors.toList());
 		System.out.println("未完了のタスクの個数は" + incompleteTaskList.size());
-		for (Task task : incompleteTaskList) {
-			System.out.println(task.getDate() + " " + task.getTask());
-		}
+		System.out.println("【未完了のタスクを昇順に並び替えて一覧表示】");
+		incompleteTaskList
+		.stream()
+        .map(task -> task.getTask() + " " + task.getDate())
+        .forEach(System.out::println);
 	}
 
 }
