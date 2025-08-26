@@ -22,7 +22,6 @@ public class Chapter10 {
 		System.out.println("【未完了のタスクを昇順に並び替えて一覧表示】");
 		incompleteTaskList
 		.stream()
-        .map(task -> task.getDate() + " " + task.getTask())
         .forEach(System.out::println);
 	}
 
